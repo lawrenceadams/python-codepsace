@@ -1,0 +1,29 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "waitFor": "onCreateCommand",
+    "updateContentCommand": "",
+    "postCreateCommand": "python3 -m pip install uv && uv venv",
+    "customizations": {
+      "codespaces": {
+        "openFiles": []
+      },
+      "vscode": {
+        "extensions": [
+          "ms-toolsai.jupyter",
+          "ms-python.python",
+          "charliermarsh.ruff"
+        ],
+        "settings": {
+            "ruff.interpreter": ["/site/venv/bin/python"],
+            "ruff.importStrategy": "fromEnvironment",
+            "ruff.organizeImports": true,
+            "ruff.fixAll": false,
+            "[python]": {
+                "diffEditor.ignoreTrimWhitespace": false,
+                "editor.defaultFormatter": "charliermarsh.ruff",
+                "editor.formatOnSave": true
+            }
+        }
+      }
+    }
+  }
