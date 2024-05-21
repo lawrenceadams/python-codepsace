@@ -1,5 +1,8 @@
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/azure-cli": "latest"
+  },
   "waitFor": "onCreateCommand",
   "updateContentCommand": "",
   "postCreateCommand": "python3 -m pip install uv && uv venv",
